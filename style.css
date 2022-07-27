@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: rgb(98, 95, 172);
+    background: linear-gradient(10deg, rgba(98, 95, 172, 1) 0%, rgba(0, 255, 132, 1) 100%);
+}
+
+.cont {
+    width: 700px;
+    height: 580px;
+    margin: 0 auto;
+    background-color: #ffebfc;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    /* filter: brightness(40%); */
+}
+
+
+/* .form {
+    background-color: aqua;
+} */
+
+.inpSearch {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0px;
+    position: relative;
+    top: 10px;
+}
+
+.add {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 171, 102);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #ffebfc;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.content {
+    width: 98%;
+    height: 86%;
+    background-color: #ffd4f9;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.grid-item {
+    width: 190px;
+    height: 100px;
+    margin-top: 20px;
+    background-color: rgb(214, 255, 241);
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+    transition: 0.5s all ease;
+}
+
+.items-box {
+    width: 100%;
+    height: 30px;
+    /* background-color: #ff86ef; */
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.grid-item-doing {
+    width: 40px;
+    height: 40px;
+    background-color: #a7ff9f;
+    border-radius: 50px;
+    margin-top: 50px;
+    transition: 0.3s all ease;
+}
+
+.grid-item-change {
+    width: 40px;
+    height: 40px;
+    background-color: #9ab2ff;
+    border-radius: 50px;
+    margin-top: 50px;
+    transition: 0.5s all ease;
+}
+
+.grid-item-delete {
+    width: 40px;
+    height: 40px;
+    background-color: #ffa8a8;
+    border-radius: 50px;
+    margin-top: 50px;
+    transition: 0.7s all ease;
+}
+
+.grid-item:hover {
+    background-color: #ffe3e3;
+}
+
+.grid-item:hover .grid-item-doing,
+.grid-item:hover .grid-item-change,
+.grid-item:hover .grid-item-delete {
+    margin-top: -10px;
+}
+
+.grid-item-doing:hover {
+    background-color: #33ff20;
+}
+
+.grid-item-change:hover {
+    background-color: #285aff;
+}
+
+.grid-item-delete:hover {
+    background-color: #ff2828;
+}
+
+.grid-item-doing:hover~.grid-item-change,
+.grid-item-doing:hover~.grid-item-delete {
+    margin-top: 20px;
+}
+
+.grid-item-change:hover~.grid-item-doing,
+.grid-item-change:hover~.grid-item-delete {
+    margin-top: 20px;
+}
+
+.grid-item-delete:hover~.grid-item-doing {
+    margin-top: 20px;
+}
+
+
+/* --------------  end zametka -------------- */
+
+
+/* ------------ scroll ------------ */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffbcf5;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(230, 41, 255);
+    border-radius: 20px;
+}
+
+
+/* ------------ scroll ------------ */
+
+
+/* --------------  start addItem ----------- */
+
+.addItem {
+    width: 900px;
+    height: 400px;
+    background: linear-gradient(#fdc7c7, #b3b9ff);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+.iconDiv {
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 215, 249);
+    background: linear-gradient( #fdc7c7 0%, rgba(255, 239, 160, 1) 100%);
+    border-radius: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* --------------- startAnim ---------------- */
+
+.startAnim {
+    animation: startAnim 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes startAnim {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 900px;
+        height: 400px;
+    }
+}
+
+.endAnim {
+    animation: endAnim 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes endAnim {
+    0% {
+        width: 900px;
+        height: 400px;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+
+/* --------------  endAnim  ------------ */
+
+.texts {
+    font-size: 20px;
+    width: 875px;
+    height: 320px;
+    padding: 5px 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 0px transparent;
+    outline: none;
+    resize: none;
+}
+
+
+/* ------------------- */
+
+.textanimstart {
+    animation: textanimstart 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes textanimstart {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 875px;
+        height: 320px;
+    }
+}
+
+.textanimend {
+    animation: textanimend 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes textanimend {
+    0% {
+        width: 875px;
+        height: 320px;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+
+/* --------- keyframes end ------- */
+
+.doingCount {
+    display: table;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.grid-item>p {
+    font-size: 25px;
+    font-family: 'Roboto';
+}
+
+.activGreenDiv {
+    background-color: #33ff20;
+    box-shadow: 0px 0px 25px 7px rgba(51, 255, 32, 0.59);
+}
+
+
+/* ------------------- */
+
+
+/* ------------ start search icon and before ---------- */
+
+
+/* .search {
+    position: relative;
+}
+
+.search::after {
+    width: 50px;
+    height: 50px;
+    content: "";
+    background-image: url(./imagesAndIcons/searchicon.png);
+    background-image: url("./imagesAndIcons/searchicon.png");
+    position: absolute;
+    left: 0px;
+    background-size: cover;
+    display: flex;
+} */
+
+.form {
+    display: flex;
+}
+
+.form>img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    right: 50px;
+    top: 13px;
+    opacity: 0.5;
+}
